@@ -15,7 +15,7 @@ BoringTun已成功部署在数百万iOS和Android消费设备以及数千台Clou
 
 ### Installation
 
-您可以使用cargo安装此项目：:
+您可以使用cargo安装此项目:
 
 ```
 cargo install boringtun
@@ -30,13 +30,13 @@ cargo install boringtun
 
 ### Running
 
-As per the specification, to start a tunnel use:
+根据规范，开始隧道使用：
 
 `boringtun [-f/--foreground] INTERFACE-NAME`
 
-The tunnel can then be configured using [wg](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg.8), as a regular WireGuard tunnel, or any other tool.
+然后可以使用 [wg](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg.8), 作为常规的WireGuard隧道或任何其他工具来配置隧道。
 
-It is also possible to use with [wg-quick](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg-quick.8) by setting the environment variable `WG_QUICK_USERSPACE_IMPLEMENTATION` to `boringtun`. For example:
+可以与wg-quick一起使用 [wg-quick](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg-quick.8) 通过将环境变量 `WG_QUICK_USERSPACE_IMPLEMENTATION` 设置为 `boringtun`.例如：
 
 `sudo WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun WG_SUDO=1 wg-quick up CONFIGURATION`
 
