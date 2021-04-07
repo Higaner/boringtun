@@ -4,18 +4,18 @@
 
 [![crates.io](https://meritbadge.herokuapp.com/boringtun)](https://crates.io/crates/boringtun)
 
-**BoringTun** is an implementation of the [WireGuard<sup>®</sup>](https://www.wireguard.com/) protocol designed for portability and speed.
+BoringTun是WireGuard®协议的一种实现，旨在提高可移植性和速度。
 
-**BoringTun** is successfully deployed on millions of [iOS](https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627) and [Android](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone&hl=en_US) consumer devices as well as thousands of Cloudflare Linux servers. 
+BoringTun已成功部署在数百万iOS和Android消费设备以及数千台Cloudflare Linux服务器上。
 
-The project consists of two parts:
+该项目由两部分组成：
 
-* The executable `boringtun`, a [userspace WireGuard](https://www.wireguard.com/xplatform/) implementation for Linux and macOS.
-* The library `boringtun` that can be used to implement fast and efficient WireGuard client apps on various platforms, including iOS and Android. It implements the underlying WireGuard protocol, without the network or tunnel stacks, those can be implemented in a platform idiomatic way.
+可执行文件boringtun，一个用于Linux和macOS的用户空间WireGuard实现。
+库boringtun，可用于在各种平台（包括iOS和Android）上实现快速高效的WireGuard客户端应用程序。它实现了底层的WireGuard协议，没有网络或隧道栈，这些都可以用平台惯用的方式实现。
 
 ### Installation
 
-You can install this project using `cargo`:
+您可以使用cargo安装此项目：:
 
 ```
 cargo install boringtun
