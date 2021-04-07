@@ -26,7 +26,7 @@ cargo install boringtun
 - Library only: `cargo build --lib --release [--target $(TARGET_TRIPLE)]`
 - Executable: `cargo build --bin boringtun --release [--target $(TARGET_TRIPLE)]`
 
-默认情况下，可执行文件放在 `./target/release` 文件夹中。您可以手动将其复制到所需的位置，或使用 `cargo install --bin boringtun --path .`.
+默认情况下，可执行文件放在 `./target/release` 文件夹中。您可以手动将其复制到所需的位置，或使用 `cargo install --bin boringtun --path .`进行安装
 
 ### Running
 
