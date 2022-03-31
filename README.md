@@ -2,7 +2,11 @@
 
 # BoringTun
 
-[![crates.io](https://meritbadge.herokuapp.com/boringtun)](https://crates.io/crates/boringtun)
+## Warning
+Boringtun is currently undergoing a restructuring. You should probably not rely on or link to 
+the master branch right now. Instead you should use the crates.io page.
+
+[![crates.io](https://img.shields.io/crates/v/boringtun.svg)](https://crates.io/crates/boringtun)
 
 BoringTun是WireGuard®协议的一种实现，旨在提高可移植性和速度。
 
@@ -23,8 +27,8 @@ cargo install boringtun
 
 ### Building
 
-- Library only: `cargo build --lib --release [--target $(TARGET_TRIPLE)]`
-- Executable: `cargo build --bin boringtun --release [--target $(TARGET_TRIPLE)]`
+- Library only: `cargo build --lib --no-default-features --release [--target $(TARGET_TRIPLE)]`
+- Executable: `cargo build --bin boringtun-cli --release [--target $(TARGET_TRIPLE)]`
 
 默认情况下，可执行文件放在 `./target/release` 文件夹中。您可以手动将其复制到所需的位置，或使用 `cargo install --bin boringtun --path .`进行安装
 
@@ -32,13 +36,13 @@ cargo install boringtun
 
 根据规范，开始隧道使用：
 
-`boringtun [-f/--foreground] INTERFACE-NAME`
+`boringtun-cli [-f/--foreground] INTERFACE-NAME`
 
 然后可以使用 [wg](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg.8), 作为常规的WireGuard隧道或任何其他工具来配置隧道。
 
 可以与wg-quick一起使用 [wg-quick](https://git.zx2c4.com/WireGuard/about/src/tools/man/wg-quick.8) 通过将环境变量 `WG_QUICK_USERSPACE_IMPLEMENTATION` 设置为 `boringtun`.例如：
 
-`sudo WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun WG_SUDO=1 wg-quick up CONFIGURATION`
+`sudo WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun-cli WG_SUDO=1 wg-quick up CONFIGURATION`
 
 ### Testing
 
@@ -100,7 +104,7 @@ The project is licensed under the [3-Clause BSD License](https://opensource.org/
 
 ### Contribution
 
-Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the 3-Clause BSD License, shall licensed as above, without any additional terms or conditions.
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the 3-Clause BSD License, shall be licensed as above, without any additional terms or conditions.
 
 If you want to contribute to this project, please read our [`CONTRIBUTING.md`].
 
